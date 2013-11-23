@@ -14,19 +14,19 @@ class sgphpug::users
 			ensure => present,
 			groups => ['laurence', 'apache', 'wheel'],
 			home => '/home/laurence',
-			require => [ Group['laurence'], File['/home/laurence'] ]
+			require => [ Group['laurence'] ]
 			;
 		'miccheng':
 			ensure => present,
 			groups => ['miccheng', 'apache', 'wheel'],
 			home => '/home/miccheng',
-			require => [ Group['miccheng'], File['/home/miccheng'] ]
+			require => [ Group['miccheng'] ]
 			;
 		'sam':
 			ensure => present,
 			groups => ['sam', 'apache', 'wheel'],
 			home => '/home/sam',
-			require => [ Group['sam'], File['/home/sam'] ]
+			require => [ Group['sam'] ]
 			;
 	}
 
