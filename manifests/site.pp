@@ -5,4 +5,5 @@ node 'sgphpug.cloudapp.net'{
     class { "sgphpug::mysql": 
     	root_pwd => 'media1'
 	}
+	class { "sgphpug::users": }
 }
