@@ -13,12 +13,11 @@ class sgphpug::mysql(
 			ensure => present
 	}
 
-	class { '::mysql': }
 	class { '::mysql::server':
 		root_password    => $root_pwd,
 		override_options => {
 			'mysqld' => {
-				'bind_address'  => '0.0.0.0',
+				'bind_address' => '0.0.0.0',
 				'lower_case_table_names' => '1'
 			}
 		},
