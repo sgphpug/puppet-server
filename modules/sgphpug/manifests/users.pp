@@ -48,7 +48,7 @@ class sgphpug::users
 			content => "",
 			owner => 'laurence',
 			group => 'laurence',
-			require => [ File['"/home/laurence/.ssh/"'], Group['laurence'] ]
+			require => [ File['/home/laurence/.ssh/'], Group['laurence'] ]
 			;
 		"/home/miccheng":
 			ensure => directory,
@@ -68,7 +68,7 @@ class sgphpug::users
 ",
 			owner => 'miccheng',
 			group => 'miccheng',
-			require => [ File['"/home/miccheng/.ssh/"'], Group['miccheng'] ]
+			require => [ File['/home/miccheng/.ssh/'], Group['miccheng'] ]
 			;
 		"/home/sam":
 			ensure => directory,
@@ -87,7 +87,7 @@ class sgphpug::users
 			content => "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAmKHXneslzeZQmueuMALCM5WXii2uxlU5cb+TxeQ0aTJftWM4sD2AXXgQ7Jhtf3X/byhdrVsbWyB5pZ3NcfDWUEBnQWsZ3BVahapGed0Knxxbf0201NBwZ/ViisTMyCKmH6+Eb4k4j8Ox44ItkZXeg3L5seWx3/ibjjeBWCxijsqiPCSEghKtmoTmXNC4aaGmyNk3eabcRNkH0uViaH4mDukwapynqRreRh7Hb35aTotPRZkm2cfq2DnvkUIDgx8ncksmKfHJBPZXWuLTw2AZBC152QAd8HkO9DCSvUrZnJkv6Qvy5nzacFekqIpwg58nqcCDbn2nLzB7sMcQSueWow== puppy",
 			owner => 'sam',
 			group => 'sam',
-			require => [ File['"/home/sam/.ssh/"'], Group['sam'] ]
+			require => [ File['/home/sam/.ssh/'], Group['sam'] ]
 			;
 	}
 }
