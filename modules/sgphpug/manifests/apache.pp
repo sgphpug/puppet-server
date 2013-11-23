@@ -27,8 +27,12 @@ class sgphpug::apache
             require => File['/var/www']
             ;
         "/var/www/phpug.sg/index.html":
+            ensure => absent,
+            require => File['/var/www/phpug.sg']
+            ;
+        "/var/www/phpug.sg/index.php":
             ensure => present,
-            content  => template("${module_name}/index.html.erb"),
+            content  => template("${module_name}/index.php.erb"),
             require => File['/var/www/phpug.sg']
             ;
    	}
