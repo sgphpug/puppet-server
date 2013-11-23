@@ -48,14 +48,4 @@ class sgphpug::php
 		target_dir   => '/usr/local/bin',
 		require => Class['php::cli']
 	}
-
-	file {
-		"/etc/php.d/xdebug.ini":
-            ensure => present,
-            content => template("${module_name}/php/xdebug.ini.erb"),
-            require => Package['php-pecl-xdebug'],
-			owner => 'root',
-            group => 'root'
-            ;
-	}
 }
