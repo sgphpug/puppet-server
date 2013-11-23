@@ -10,5 +10,6 @@ sudo puppet resource service puppetmaster ensure=running enable=true
 puppet module install puppetlabs/apache
 puppet module install puppetlabs/firewall
 puppet module install thias/php
+puppet module install willdurand/composer
 puppet module install puppetlabs/mysql
 ```

@@ -4,3 +4,5 @@ modules/stdlib
 modules/firewall
 modules/php
 modules/mysql
+modules/composer
+modules/wget
