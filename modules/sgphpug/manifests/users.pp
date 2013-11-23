@@ -17,7 +17,7 @@ class sgphpug::users
 		"/home/laurence":
 			ensure => directory,
 			owner => 'laurence',
-			group => 'laurence'
+			group => 'laurence',
 			require => [ Group['laurence'] ]
 	}
 }
