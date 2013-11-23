@@ -15,7 +15,7 @@ class sgphpug::mysql(
 
 	class { '::mysql': }
 	class { '::mysql::server':
-		root_password    => $root_pwd
+		root_password    => $root_pwd,
 		override_options => {
 			'mysqld' => {
 				'bind_address'  => '0.0.0.0',
