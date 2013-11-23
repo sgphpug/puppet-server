@@ -1,7 +1,11 @@
 class sgphpug::users
 {
 	group{
-		'laurence':
+		[
+			'miccheng',
+			'laurence',
+			'sam',
+		]:
 			ensure => present
 	}
 
@@ -11,6 +15,19 @@ class sgphpug::users
 			groups => ['laurence', 'apache', 'wheel'],
 			home => '/home/laurence',
 			require => [ Group['laurence'], File['/home/laurence'] ]
+			;
+		'miccheng':
+			ensure => present,
+			groups => ['miccheng', 'apache', 'wheel'],
+			home => '/home/miccheng',
+			require => [ Group['miccheng'], File['/home/miccheng'] ]
+			;
+		'sam':
+			ensure => present,
+			groups => ['sam', 'apache', 'wheel'],
+			home => '/home/sam',
+			require => [ Group['sam'], File['/home/sam'] ]
+			;
 	}
 
 	file {
@@ -19,5 +36,18 @@ class sgphpug::users
 			owner => 'laurence',
 			group => 'laurence',
 			require => [ Group['laurence'] ]
+			;
+		"/home/miccheng":
+			ensure => directory,
+			owner => 'miccheng',
+			group => 'miccheng',
+			require => [ Group['miccheng'] ]
+			;
+		"/home/sam":
+			ensure => directory,
+			owner => 'sam',
+			group => 'sam',
+			require => [ Group['sam'] ]
+			;
 	}
 }
