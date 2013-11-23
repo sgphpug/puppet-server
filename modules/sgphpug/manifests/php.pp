@@ -33,14 +33,14 @@ class sgphpug::php
 			'soap',
 			'xml',
 			'pecl-memcache',
-			'pecl-xdebug',
 			'xcache',
-			'pear-Net-Curl',
-			'pecl-xhprof',
-			'phpunit-PHPUnit',
-			'phpunit-PHPUnit-MockObject',
-			'phpunit-DbUnit'
+			'pear-Net-Curl'
 		]:
 		require => [ Class['php::cli'], Exec['grap-epel'], Package['uuid-php'] ]
+	}
+	class { '::composer':
+		command_name => 'composer',
+		target_dir   => '/usr/local/bin',
+		require => Class['php::cli']
 	}
 }
