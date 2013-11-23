@@ -43,9 +43,4 @@ class sgphpug::php
 		]:
 		require => [ Class['php::cli'], Exec['grap-epel'], Package['uuid-php'] ]
 	}
-	class { '::composer':
-		command_name => 'composer',
-		target_dir   => '/usr/local/bin',
-		require => Class['php::cli']
-	}
 }
