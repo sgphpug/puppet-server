@@ -3,7 +3,7 @@ class sgphpug::users
 	user {
 		'laurence':
 			ensure => present,
-			groups => ['laurence', 'wheel'],
+			groups => ['apache', 'wheel'],
 			home => '/home/laurence'
 	}
 }
