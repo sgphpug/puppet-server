@@ -1,3 +1,6 @@
 modules/apache
 modules/concat
 modules/stdlib
+modules/firewall
+modules/php
+modules/mysql
