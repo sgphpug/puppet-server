@@ -4,8 +4,8 @@ class sgphpug::apache
 		default_vhost => false,
         sendfile => 'Off'
 	}
-	apache::listen { "80": }
-    apache::namevirtualhost { "*:80": }
+	apache::listen { '80': }
+    apache::namevirtualhost { '*:80': }
 
     apache::vhost { "phpug.sg":
         serveraliases => "www.phpug.sg",
