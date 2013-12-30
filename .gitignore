@@ -6,3 +6,4 @@ modules/php
 modules/mysql
 modules/composer
 modules/wget
+hiera.yaml
