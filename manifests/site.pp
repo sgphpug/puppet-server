@@ -2,7 +2,9 @@ node 'sgphpug.cloudapp.net'{
     class { "sgphpug": }
     class { "sgphpug::apache": }
     class { "sgphpug::php": }
-    class { "sgphpug::mysql": }
+    class { "sgphpug::mysql":
+		root_pwd => 'media1'
+	}
 
 	sgphpug::user{ "miccheng":
 		public_key => 'ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAxRRDYFyVZ9oJDag2FBuxL9MzSVXSzJh/vT8KSEF6KYUvjPW257lK+iIWeK0x5yAHZ1OetJ9s0nYZRIfkLkf1HlJMrRRYgaZRKZuzlqmE00ozP6LHPSW4DaxPT+NElnUYoznlgCCM9A+A4ZNdOUgBHXc44qY0QdmDRQBTgS5JLEoSafa6o3MU3gvTPwK7POVxFtm+pmfix4OOxqNN0S/qoHMCfKwrp4737CEpJgqE6cgopNkG9pnFC90ZgYK/bbpD24KKRNf/aXhJsKEU+81c4WL88P6vZR3NIioNhqjgpqFFryXNc6P0F47XpFjdz9L2kvu4GuVQxEeHyV78ozxrfw== miccheng@miccheng-laptop'
