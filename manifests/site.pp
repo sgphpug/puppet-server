@@ -15,3 +15,7 @@ node 'sgphpug.cloudapp.net'{
 	sgphpug::user{ "uzyn": }
 	sgphpug::user{ "laurence": }
 }
+
+node 'alien2.codersg.com'{
+	notify{"Hello, Alien2!":}
+}
