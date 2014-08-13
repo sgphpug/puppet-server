@@ -17,6 +17,9 @@ node 'sgphpug.cloudapp.net'{
   }
 	sgphpug::user{ "uzyn": }
 	sgphpug::user{ "laurence": }
+	sgphpug::user{ "robertsky":
+		public_key => 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCY92bXCvJaTznqARjF38y3zpXLT0cvfvq0hCL4vxAW4EKN0KgKSdqnbFUXZZr3Trc2FnO8+GOpJV3mUbyJTPvx9njtc3yQq1Wg14VFNUUSeyGpTL4c8oHgc22h2QP7+HoomK77Y22Z5YorgGLcS6LbGDKu16983/b5/47uBoTvYynddSp3tRUfMfU0jLiS99SsnJnxdQeJ01krug++qi2Ji72mxe4KoCZvWFb6EqofjRwGL/b8cYgA/Zj4AzYrh6E9GxMudewkoSjLRIwt5+ZZKqbC+PKoaRH0pWukrQ7cOeqnSsiJOpvtG7lKTCzcDhna9uZzQ3xFLonr2NYKIs6V contact@robertsky.com'
+	}
 }
 
 node 'alien2.codersg.com'{
