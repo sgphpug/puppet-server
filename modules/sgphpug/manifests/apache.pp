@@ -16,6 +16,15 @@ class sgphpug::apache
 		],
 	}
 
+    apache::vhost { "phpconf.asia":
+        serveraliases => "www.phpconf.asia",
+        port    => '80',
+        docroot => '/var/www/phpconf.asia',
+        directories => [
+            { path => '/var/www/phpconf.asia', order => 'Allow,Deny', allow => 'from all', allow_override => ['All'] }
+        ],
+    }
+
 	file{
         [
             "/var/www"
@@ -28,8 +37,17 @@ class sgphpug::apache
             ;
         "/var/www/phpug.sg/index.php":
             ensure => present,
-            content => template("${module_name}/index.php.erb"),
+            content => template("${module_name}/phpug.sg/index.php.erb"),
             require => File['/var/www/phpug.sg']
+            ;
+        "/var/www/phpconf.asia":
+            ensure => directory,
+            require => File['/var/www']
+            ;
+        "/var/www/phpconf.asia/index.php":
+            ensure => present,
+            content => template("${module_name}/phpconf.asia/index.php.erb"),
+            require => File['/var/www/phpconf.asia']
             ;
    	}
 }
