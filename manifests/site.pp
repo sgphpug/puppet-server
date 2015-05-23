@@ -1,4 +1,6 @@
-node 'sgphpug.cloudapp.net'{
+node 'sgphpug.cloudapp.net',
+     'server2-sgphpug.cloudapp.net'
+  {
     class { "sgphpug": }
     class { "sgphpug::apache": }
     class { "sgphpug::php": }
@@ -17,10 +19,6 @@ node 'sgphpug.cloudapp.net'{
   }
 	sgphpug::user{ "uzyn": }
 	sgphpug::user{ "laurence": }
-}
-
-node 'server2-sgphpug.cloudapp.net' {
-  notify{"Hello, Server 2":}
 }
 
 node 'alien2.codersg.com'{
