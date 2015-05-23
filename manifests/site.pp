@@ -19,6 +19,10 @@ node 'sgphpug.cloudapp.net'{
 	sgphpug::user{ "laurence": }
 }
 
+node 'server2-sgphpug.cloudapp.net' {
+  notify{"Hello, Server 2":}
+}
+
 node 'alien2.codersg.com'{
 	notify{"Hello, Alien2!":}
 }
