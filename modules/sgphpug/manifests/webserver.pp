@@ -1,4 +1,4 @@
-class sgphpug::apache
+class sgphpug::webserver
 {
 	class {'::apache':
 		default_vhost => false,

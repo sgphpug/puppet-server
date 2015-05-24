@@ -1,8 +1,7 @@
 node 'sgphpug.cloudapp.net',
-     'server2-sgphpug.cloudapp.net'
-  {
-   #  class { "sgphpug": }
-   #  class { "sgphpug::apache": }
+     'server2-sgphpug.cloudapp.net'{
+    class { "sgphpug": }
+    class { "sgphpug::webserver": }
    #  class { "sgphpug::php": }
    #  class { "sgphpug::mysql":
   	# 	root_pwd => 'media1'
