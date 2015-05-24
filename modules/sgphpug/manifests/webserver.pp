@@ -12,7 +12,7 @@ class sgphpug::webserver
 		port    => '80',
 		docroot => '/var/www/phpug.sg',
 		directories => [
-			{ path => '/var/www/phpug.sg', order => 'Allow,Deny', allow => 'from all', allow_override => ['All'] }
+			{ path => '/var/www/phpug.sg', allow_override => ['All'] }
 		],
 	}
 
@@ -21,7 +21,7 @@ class sgphpug::webserver
         port    => '80',
         docroot => '/var/www/phpconf.asia',
         directories => [
-            { path => '/var/www/phpconf.asia', order => 'Allow,Deny', allow => 'from all', allow_override => ['All'] }
+            { path => '/var/www/phpconf.asia', allow_override => ['All'] }
         ],
     }
 
