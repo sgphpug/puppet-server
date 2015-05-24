@@ -10,7 +10,7 @@ define sgphpug::user(
 	user {
 		$title:
 			ensure => present,
-			groups => [$title, 'wheel'],
+			groups => [$title],
 			home => "/home/$title",
 			require => [ Group[$title] ]
 			;
