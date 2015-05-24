@@ -1,6 +1,6 @@
 class sgphpug::php
 {
-	class { '::php::mod_php5': }
+	class { '::php::mod_php5': inifile => '/etc/apache2/conf-enabled/php.ini' }
 	class { "::php::cli": }
 	php::ini { '/etc/php.ini':
 		display_errors => 'Off',
