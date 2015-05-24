@@ -1,7 +1,7 @@
 class sgphpug::php
 {
-	class { "::php::cli": }
 	class { '::php::mod_php5': }
+	class { "::php::cli": }
 	php::ini { '/etc/php.ini':
 		display_errors => 'Off',
 		date_timezone => 'Asia/Singapore',
