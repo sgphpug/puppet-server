@@ -1,14 +1,5 @@
 class sgphpug::php
 {
-	package { [
-			"uuid-php",
-			"xcache-admin"
-		]:
-			ensure => present,
-			require => Yumrepo['epel']
-			;
-	}
-
 	class { "::php::cli": }
 	class { '::php::mod_php5': }
 	php::ini { '/etc/php.ini':
@@ -37,7 +28,7 @@ class sgphpug::php
 			'xcache',
 			'pear-Net-Curl'
 		]:
-		require => [ Class['php::cli'], Yumrepo['epel'], Package['uuid-php'] ]
+		require => [ Class['php::cli'] ]
 	}
 	class { '::composer':
 		command_name => 'composer',
